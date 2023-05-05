@@ -1,0 +1,65 @@
+
+.div_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .box {
+    background-color: rgb(54, 54, 54); 
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed #000000;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+
+}
+
+.botao_maquina {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    transition: all .3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+   }
+   
+   .botao_maquina:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+   
+   .botao_maquina:active {
+    background-color: rgb(255, 56, 86);
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+  @media (max-width: 768px) {
+    .box{
+        max-width: 70%;
+    }
+    
+  }
+
+.resultado{
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.credits_left{
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.frutas_animacao{
+    animation: reverse;
+}
