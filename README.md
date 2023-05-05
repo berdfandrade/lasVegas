@@ -6,7 +6,7 @@ Este é um projeto de uma máquina caça-níqueis desenvolvida em nível full-st
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
 - [MongoDB](https://www.mongodb.com/)
-- [Toastify](https://fkhadra.github.io/react-toastify/introduction/)
+
 
 A aplicação é dividida em duas partes: a parte do cliente (front-end) e a parte do servidor (back-end).
 
