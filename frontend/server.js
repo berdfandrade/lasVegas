@@ -1,19 +1,27 @@
 
 
+const express = require('express');
+const {createProxyMiddleware} = require('http-proxy-middleware');
 
+const app = express(); 
 
-const express = require('express'); 
-const cors = require('cors');
-const app = express();
-const PORT =  3000; 
+const port = process.env.PORT || 3000; 
 
-app.use(cors());
+const apiProxy = createProxyMiddleware({
+	target: 'http://localhost:4000',
+	changeOrigin: true,
+  });
+  
+app.use('/api', apiProxy);
+  
+app.use(express.static('build'));
 
-app.get('/', (req, res)=> {
-	res.send({ message : "bom dia " });
+app.get('*', (req, res) => {
+  res.sendFile(`${__dirname}/build/index.html`);
 });
 
-app.listen(PORT, () => {
-	console.log(`Servidor rodando na porta ${PORT}`);
-});  
+
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
 

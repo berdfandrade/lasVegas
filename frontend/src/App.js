@@ -5,12 +5,12 @@ import './App.css';
 import {SlotMachine, Player} from './componentes/SlotMachine/slotMachine';
 
 
-const bernardo = new Player("Bernardo");
+const player = new Player("Bernardo");
 
 function App() {
   return (
     <div className="App">
-      <SlotMachine Player={bernardo}/>
+      <SlotMachine Player={"player"}/>
     </div>
   );
 }

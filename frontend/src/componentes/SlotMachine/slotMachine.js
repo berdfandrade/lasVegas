@@ -1,7 +1,5 @@
 
 
-
-
 import { useState } from "react";
 import "./slotMachine.css";
 
@@ -13,24 +11,35 @@ class Player {
   }
 }
 
+// Função para fazer o reset dos credits
 function resetGame(player) {
   player.credits = 10;
 }
 
 // Lógica do jogo
 function game(player) {
+
   function roll(player) {
+  
     let results = [];
     const symbols = ["🍒", "🍋", "🍊", "🍉"];
-    const values = { "🍒": 10, "🍋": 20, "🍊": 30, "🍉": 40 };
+    
+    const values = {
+      "🍒": 10,
+      "🍋": 20,
+      "🍊": 30,
+      "🍉": 40,
+    };
 
     player.credits -= 1;
+
 
     for (let i = 0; i < 3; i++) {
       const index = Math.floor(Math.random() * symbols.length);
       const symbol = symbols[index];
       results.push(symbol);
     }
+  
 
     if (results[0] === results[1] && results[1] === results[2]) {
       const reward = values[results[0]];
